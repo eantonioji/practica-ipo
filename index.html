@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anillos de Interacción Gestual - Práctica IPO</title>
+  <style>
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: #fef4cf;
+      color: #111111;
+      padding: 20px 15px;
+    }
+
+    .wrapper {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    /* Cabecera Amarilla */
+    header {
+      background-color: #ffcf00;
+      border: 3px solid #000000;
+      border-radius: 20px;
+      padding: 35px 20px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 4px 4px 0px #000000;
+    }
+
+    header h1 {
+      color: #cc0000;
+      font-size: 2.2rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .subtitulo-header {
+      font-size: 1.05rem;
+      color: #111111;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    /* Botones del menú */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    nav a {
+      display: inline-block;
+      color: #1d4ed8;
+      background-color: #ffffff;
+      border: 2px solid #000000;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+      padding: 8px 18px;
+      box-shadow: 2px 2px 0px #000000;
+      transition: all 0.15s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffcf00;
+      color: #000000;
+    }
+
+    /* Tarjetas estilo viñeta */
+    section {
+      background-color: #ffffff;
+      border: 3px solid #000000;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 5px 5px 0px #000000;
+    }
+
+    /* Titular amarillo de sección */
+    section h2 {
+      display: inline-block;
+      background-color: #ffcf00;
+      border: 3px solid #000000;
+      border-radius: 12px;
+      padding: 8px 16px;
+      color: #000000;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      box-shadow: 2px 2px 0px #000000;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+      color: #111111;
+    }
+
+    ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      font-size: 0.93rem;
+    }
+
+    /* Imágenes con borde cómic */
+    .contenedor-imagen {
+      text-align: center;
+      margin: 25px 0;
+    }
+
+    .contenedor-imagen img {
+      max-width: 100%;
+      height: auto;
+      border: 3px solid #000000;
+      border-radius: 12px;
+      box-shadow: 4px 4px 0px #000000;
+    }
+
+    .pie-foto {
+      font-size: 0.85rem;
+      color: #444444;
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    .galeria-tarjetas, .bloque-evolucion {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    article, .item-evolucion, .caja-enlaces li {
+      background-color: #fffdf5;
+      border: 2px solid #000000;
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: 3px 3px 0px #000000;
+    }
+
+    .item-evolucion.actual {
+      background-color: #e6fffa;
+    }
+
+    article h3, .item-evolucion h3 {
+      font-size: 1rem;
+      color: #cc0000;
+      margin-bottom: 6px;
+    }
+
+    .caja-enlaces ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .caja-enlaces a {
+      color: #1d4ed8;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .desc-enlace {
+      font-size: 0.85rem;
+      color: #444444;
+      display: block;
+      margin-top: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffcf00;
+      border: 3px solid #000000;
+      border-radius: 14px;
+      box-shadow: 4px 4px 0px #000000;
+      color: #000000;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <header>
+      <h1>Anillos de Interacción Gestual Activa</h1>
+      <p class="subtitulo-header">Un dispositivo hardware para mejorar la accesibilidad en la interacción persona-ordenador</p>
+      <nav>
+        <ul>
+          <li><a href="#dispositivo">El Dispositivo</a></li>
+          <li><a href="#funcionamiento">Cómo Funciona</a></li>
+          <li><a href="#beneficios">Por qué lo he elegido</a></li>
+          <li><a href="#evolucion">Evolución Histórica</a></li>
+          <li><a href="#mas-info">Enlaces</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- DESCRIPCIÓN -->
+      <section id="dispositivo">
+        <h2>1. Descripción del dispositivo</h2>
+        
+        <p>El anillo de interacción gestual activa, también conocido como <strong>Smart Gesture Ring</strong>, se trata de un dispositivo tecnológico de tamaño reducido que se lleva en uno de los dedos de la mano, normalmente en el índice o en el pulgar. Su diseño es ligero y cómodo, por lo que permite utilizarlo durante bastante tiempo sin resultar molesto.</p>
+
+        <p>A diferencia de otros anillos inteligentes centrados en controlar la salud o la actividad física, este dispositivo está diseñado para controlar otros aparatos electrónicos mediante movimientos de la mano y gestos de los dedos. Su función principal es servir como alternativa o complemento al ratón y al teclado tradicionales.</p>
+
+        <div class="contenedor-imagen">
+          <img src="anillo.jpg" alt="Anillo de interacción gestual activa para control de dispositivos">
+          <p class="pie-foto">Figura 1: Anillo gestual de interacción activa.</p>
+        </div>
+
+        <p>Para ello, incorpora sensores que detectan los movimientos y los transforman en órdenes que se envían a dispositivos como ordenadores, tablets o móviles. Por ejemplo, permite mover el cursor, hacer clic, pasar diapositivas o controlar el volumen sin necesidad de tocar directamente la pantalla ni utilizar un ratón.</p>
+
+        <p>Además, suele conectarse de forma inalámbrica mediante Bluetooth, lo que facilita su uso en diferentes situaciones.</p>
+
+        <p>Entre sus funciones principales destacan:</p>
+        <ul>
+          <li><strong>Desplazamiento del cursor:</strong> Permite mover el puntero por la pantalla simplemente orientando o moviendo el dedo en el aire en cualquier dirección.</li>
+          <li><strong>Ejecución de clics y selección:</strong> Reconoce pequeños toques rápidos entre dedos para hacer clic izquierdo, clic derecho o doble clic.</li>
+          <li><strong>Navegación y scroll:</strong> Al deslizar el dedo o girar levemente la muñeca hacia arriba o abajo, se puede hacer scroll en páginas web o documentos largos.</li>
+          <li><strong>Atajos de teclado personalizables:</strong> Mediante software se pueden programar gestos concretos para realizar funciones habituales como copiar, pegar o cambiar de ventana.</li>
+          <li><strong>Control multimedia y presentaciones:</strong> Sirve para pasar diapositivas a distancia, subir el volumen o pausar vídeos durante exposiciones.</li>
+        </ul>
+      </section>
+
+      <!-- CÓMO FUNCIONA -->
+      <section id="funcionamiento">
+        <h2>2. ¿Cómo funciona la tecnología interna del anillo?</h2>
+        
+        <p>El funcionamiento de este hardware se basa en una combinación de sensores miniaturizados, conexión inalámbrica de baja latencia y software de procesamiento en el equipo receptor:</p>
+
+        <ul>
+          <li><strong>Detección del movimiento:</strong> En el interior del anillo hay instalados pequeños giroscopios y acelerómetros. Estos componentes miden constantemente la aceleración, la inclinación y la velocidad de giro del dedo en los tres ejes del espacio.</li>
+          <li><strong>Reconocimiento de micro-gestos:</strong> Detecta cuando el usuario realiza pequeños toques entre dedos o inclinaciones rápidas, diferenciando entre un movimiento involuntario y un gesto intencionado.</li>
+          <li><strong>Transmisión inalámbrica:</strong> El microprocesador del anillo procesa los datos y los envía por Bluetooth al ordenador o teléfono con una respuesta casi inmediata (menos de 15 milisegundos de retardo).</li>
+          <li><strong>Mapeo mediante software:</strong> El sistema operativo del equipo recibe la señal y la convierte en acciones concretas del cursor o pulsaciones de teclado personalizables.</li>
+        </ul>
+
+        <p>La gran ventaja de este sistema es que no requiere que la mano esté fija sobre un escritorio. Al ir sujeto al dedo, funciona aunque la mano esté apoyada en el regazo o sobre el reposabrazos de una silla de ruedas.</p>
+      </section>
+
+      <!-- POR QUÉ LO HE ELEGIDO -->
+      <section id="beneficios">
+        <h2>3. Por qué lo he elegido y qué beneficios aporta en IPO</h2>
+        
+        <p>He elegido este dispositivo porque me parece una tecnología bastante interesante y diferente a los dispositivos que utilizamos normalmente. Me ha llamado la atención sobre todo porque puede ayudar a personas que tienen dificultades para utilizar un ratón o un teclado convencional, permitiéndoles manejar un ordenador de una forma más sencilla. Además, creo que tiene bastante relación con la asignatura de IPO, ya que busca mejorar la forma en la que las personas interactúan con la tecnología y hacer que sea más accesible para todo el mundo.</p>
+
+        <div class="galeria-tarjetas">
+          <article>
+            <h3>Accesibilidad: ayuda a personas con movilidad reducida</h3>
+            <p>Puede ayudar a personas con enfermedades musculares o parálisis que tienen dificultades para mover los brazos o utilizar un ratón normal. Gracias a los movimientos de los dedos, pueden realizar diferentes acciones en el ordenador de forma más independiente.</p>
+          </article>
+
+          <article>
+            <h3>Comodidad: reduce el esfuerzo físico</h3>
+            <p>Al no tener que mover continuamente un ratón por la mesa, puede resultar más cómodo y reducir el cansancio de la muñeca y el brazo cuando se utiliza durante varias horas.</p>
+          </article>
+
+          <article>
+            <h3>Diseño: discreto y cómodo de llevar</h3>
+            <p>Al ser un anillo, es pequeño, ligero y fácil de llevar. No ocupa espacio en la mesa ni necesita aparatos grandes, por lo que resulta una forma bastante cómoda y natural de controlar otros dispositivos.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- EVOLUCIÓN HISTÓRICA -->
+      <section id="evolucion">
+        <h2>4. Evolución histórica: ¿A qué dispositivos sustituye?</h2>
+        
+        <p>Antes de que aparecieran dispositivos como el anillo de interacción gestual, ya existían otras formas de controlar un ordenador para personas que tenían dificultades para utilizar un ratón o un teclado normal. Con el paso del tiempo, estos sistemas han ido mejorando para intentar que utilizar un ordenador sea cada vez más fácil y cómodo.</p>
+        
+        <p>Algunos de los dispositivos que se utilizaban anteriormente son:</p>
+
+        <!-- IMAGEN DE LA LÍNEA DEL TIEMPO -->
+        <div class="contenedor-imagen">
+          <img src="evolucion_dispositivos.png" alt="Línea del tiempo de evolución de los dispositivos de accesibilidad">
+          <p class="pie-foto">Figura 2: Línea del tiempo de los dispositivos anteriores frente a la solución actual.</p>
+        </div>
+
+        <div class="bloque-evolucion">
+          <div class="item-evolucion">
+            <h3>1. Pulsadores mecánicos</h3>
+            <p><strong>Antes:</strong> Eran botones grandes que se colocaban en la cabeza, la barbilla o los pies. La persona tenía que pulsarlos cuando aparecía en la pantalla la opción que quería seleccionar.</p>
+            <p><strong>Problema:</strong> Era bastante lento, porque había que esperar a que apareciera cada opción para poder seleccionarla.</p>
+          </div>
+
+          <div class="item-evolucion">
+            <h3>2. Sistemas de soplado</h3>
+            <p><strong>Antes:</strong> Funcionaban mediante un tubo colocado cerca de la boca. El usuario podía realizar acciones en el ordenador soplando o aspirando aire.</p>
+            <p><strong>Problema:</strong> Podía resultar incómodo y cansado, ya que dependía constantemente de los movimientos de la boca.</p>
+          </div>
+
+          <div class="item-evolucion">
+            <h3>3. Seguimiento de la mirada</h3>
+            <p><strong>Antes:</strong> Utilizaba una cámara que detectaba hacia dónde miraba la persona para mover el cursor y seleccionar opciones sin necesidad de utilizar las manos.</p>
+            <p><strong>Problema:</strong> Podía fallar dependiendo de la luz, de la posición de la persona o incluso del uso de gafas.</p>
+          </div>
+
+          <div class="item-evolucion actual">
+            <h3>4. Anillo de interacción gestual activa (Actualidad)</h3>
+            <p>El anillo permite controlar el ordenador mediante gestos de forma más directa y cómoda, sin depender de la iluminación, utilizar tubos o mantener la mirada fija en la pantalla durante mucho tiempo.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ENLACES -->
+      <section id="mas-info">
+        <h2>5. Enlaces para más información</h2>
+        
+        <p>Para ampliar información sobre el funcionamiento real de estos anillos de control gestual, su compra y su análisis técnico en medios de tecnología, se pueden consultar los siguientes enlaces:</p>
+
+        <div class="caja-enlaces">
+          <ul>
+            <li>
+              <strong>Página oficial de compra (Lotus Ring):</strong><br>
+              <a href="https://getlotus.com/" target="_blank">https://getlotus.com/</a><br>
+              <span class="desc-enlace">Web oficial de compra de Lotus, el anillo vestible creado para controlar la televisión, luces y aparatos de casa apuntando con el dedo sin usar mandos a distancia.</span>
+            </li>
+            <li>
+              <strong>Artículo tecnológico en Xataka (Anillos para sustituir el ratón):</strong><br>
+              <a href="https://www.xataka.com/perifericos/genius-se-trae-a-espana-su-ring-mouse-para-los-jedi-de-las-presentaciones" target="_blank">https://www.xataka.com/perifericos/genius-se-trae-a-espana-su-ring-mouse-para-los-jedi-de-las-presentaciones</a><br>
+              <span class="desc-enlace">Artículo en Xataka sobre los dispositivos Ring Mouse, anillos equipados con sensores y trackpad para controlar el ordenador y presentaciones sin usar ratón clásico.</span>
+            </li>
+            <li>
+              <strong>Artículo en Xataka sobre interacción gestual en dispositivos:</strong><br>
+              <a href="https://www.xataka.com/otros/el-anillo-de-16-lab-permite-controlar-todo-tipo-de-dispositivos-a-traves-de-gestos" target="_blank">https://www.xataka.com/otros/el-anillo-de-16-lab-permite-controlar-todo-tipo-de-dispositivos-a-traves-de-gestos</a><br>
+              <span class="desc-enlace">Noticia de Xataka sobre la tecnología de anillos con sensores de movimiento y Bluetooth para controlar ordenadores y dispositivos móviles en el aire mediante gestos.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>Fundamentos de Interacción Persona-Ordenador · Trabajo sobre Hardware de Interacción</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
